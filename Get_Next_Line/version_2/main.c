@@ -6,7 +6,7 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 13:25:06 by daron             #+#    #+#             */
-/*   Updated: 2019/09/16 19:07:36 by daron            ###   ########.fr       */
+/*   Updated: 2019/09/26 15:28:21 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,10 @@ int			main(int argc, char **argv)
 	while (get_next_line(fd, &line) == 1)
 	{
 		printf("%d: %s$\n", i, line);
+		free(line);
 		i++;
 	}
-
+//	scanf("%d", &fd);
 	close(fd);
 
 	/*char		*line1;

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="fillit" targetName="fillit" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39ebda9e-ace5-489a-a49d-f5309ab796e3" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/libft" />
+  </component>
+  <component name="ProjectId" id="1QjeI6Xqdevf0M1XndvFcLq9Xi5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/samples" />
+      <recent name="$PROJECT_DIR$/includes" />
+      <recent name="$PROJECT_DIR$/maps" />
+      <recent name="$PROJECT_DIR$/srcs" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="fillit" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/maps/valid.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fillit" TARGET_NAME="fillit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fillit" RUN_TARGET_NAME="fillit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39ebda9e-ace5-489a-a49d-f5309ab796e3" name="Default Changelist" comment="" />
+      <created>1568288349477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568288349477</updated>
+      <workItem from="1568288351498" duration="8345000" />
+      <workItem from="1568372798211" duration="4496000" />
+      <workItem from="1568386031568" duration="1953000" />
+      <workItem from="1568450383571" duration="264000" />
+      <workItem from="1568451523363" duration="16144000" />
+      <workItem from="1568622980535" duration="8616000" />
+      <workItem from="1568640781657" duration="2716000" />
+      <workItem from="1568644612975" duration="420000" />
+      <workItem from="1568645188015" duration="1641000" />
+      <workItem from="1568648917370" duration="188000" />
+      <workItem from="1568708432637" duration="7269000" />
+      <workItem from="1568721449055" duration="8107000" />
+      <workItem from="1568791542613" duration="217000" />
+      <workItem from="1568791844485" duration="565000" />
+      <workItem from="1568880776808" duration="41000" />
+      <workItem from="1568880825309" duration="1109000" />
+      <workItem from="1568966571557" duration="4522000" />
+      <workItem from="1569331991502" duration="180000" />
+      <workItem from="1569332175188" duration="1000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
