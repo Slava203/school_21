@@ -1,0 +1,2 @@
+sudo /etc/init.d/ssh status
+# нужно предварительно установить ssh командой - apt-get install openssh-server

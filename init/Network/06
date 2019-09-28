@@ -1,0 +1,2 @@
+#!/bin/bash
+find /private/etc/resolv.conf

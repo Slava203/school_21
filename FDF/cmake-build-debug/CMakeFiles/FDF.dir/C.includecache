@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daron/FDF/fdf.h
+fcntl.h
+-
+unistd.h
+-
+stdlib.h
+-
+stdio.h
+-
+limits.h
+-
+libft/includes/libft.h
+/Users/daron/FDF/libft/includes/libft.h
+
+/Users/daron/FDF/libft/includes/libft.h
+string.h
+-
+stdlib.h
+-
+sys/types.h
+-
+sys/uio.h
+-
+unistd.h
+-
+
+/Users/daron/FDF/main.c
+fdf.h
+/Users/daron/FDF/fdf.h
+

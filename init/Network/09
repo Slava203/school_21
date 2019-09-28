@@ -1,0 +1,2 @@
+#!/bin/bash
+nslookup 42.fr | grep "Non-authoritative answer:" -A100 | grep "Address:" | cut -d " " -f 2

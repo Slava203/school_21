@@ -1,0 +1,3 @@
+systemctl --type=service | grep ".service" | awk -F '.service' '{print $1}'
+# pstree -p - позволяет отобразить все процессы с начала старта системы  
+# systemctl - позволяет работать с системными процессами

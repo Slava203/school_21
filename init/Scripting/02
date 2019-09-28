@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Which user should be deleted"
+read user_name
+
+if cat /etc/passwd | grep $user_name
+then
+	sudo userdel -r $user_name
+else
+	echo "Don't exist $user_name"
+fi
