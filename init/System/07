@@ -1,2 +1,3 @@
-cat /var/run/sshd.pid
+systemctl status ssh | grep PID | awk '{print $3}'
+#cat /var/run/sshd.pid
 #  PID - идентификационный номер процесса демона SSHD

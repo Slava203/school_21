@@ -1,1 +1,2 @@
-ps aux
+#ps aux
+top

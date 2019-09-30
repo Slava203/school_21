@@ -7,5 +7,5 @@ if cat /etc/passwd | grep $user_name
 then
 	sudo userdel -r $user_name
 else
-	echo "Don't exist $user_name"
+	echo "Don't exist user - $user_name"
 fi
