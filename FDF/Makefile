@@ -6,7 +6,7 @@
 #    By: daron <daron@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/23 16:10:40 by daron             #+#    #+#              #
-#    Updated: 2019/09/26 14:25:05 by daron            ###   ########.fr        #
+#    Updated: 2019/09/30 15:43:51 by daron            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ HEADERS_DIRECTORY = ./includes/
 HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
 SOURCES_DIRECTORY = ./source/
-SOURCES_LIST = main.c init_function.c reader.c work_with_number.c draw.c projection.c work_with_color.c buttons.c change_map.c
+SOURCES_LIST = main.c new_function.c free_function.c reader.c draw.c projection.c work_with_color.c buttons.c change_map.c
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 
 OBJECTS_DIRECTORY = objects/

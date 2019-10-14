@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="fillit" targetName="fillit" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
@@ -11,7 +9,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39ebda9e-ace5-489a-a49d-f5309ab796e3" name="Default Changelist" comment="" />
+    <list default="true" id="39ebda9e-ace5-489a-a49d-f5309ab796e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reader.c" beforeDir="false" afterPath="$PROJECT_DIR$/reader.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/valid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/valid.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +24,8 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/libft" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1QjeI6Xqdevf0M1XndvFcLq9Xi5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -59,7 +61,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="fillit" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/maps/valid.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fillit" TARGET_NAME="fillit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fillit" RUN_TARGET_NAME="fillit">
+    <configuration name="fillit" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/maps/valid.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="fillit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="fillit">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -94,6 +96,9 @@
       <workItem from="1568966571557" duration="4522000" />
       <workItem from="1569331991502" duration="180000" />
       <workItem from="1569332175188" duration="1000" />
+      <workItem from="1570091718957" duration="42000" />
+      <workItem from="1570543311632" duration="249000" />
+      <workItem from="1570618490024" duration="43000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,7 @@
 /*   By: daron <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 10:36:11 by daron             #+#    #+#             */
-/*   Updated: 2019/09/25 15:40:55 by daron            ###   ########.fr       */
+/*   Updated: 2019/10/02 17:27:00 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@
 # define FT_MAX(A, B) (((A) > (B)) ? (A) : (B))
 # define FT_ABS(A) (((A) < 0) ? (-(A)) : (A))
 
+/*
+ ** For get_next_line()
+*/
+# define BUFF_SIZE 32
+
 typedef	struct		s_list
 {
 	void			*content;
@@ -30,14 +35,12 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct			s_descriptor
+typedef struct		s_descriptor
 {
 	int					fd;
 	char				*str;
 	struct s_descriptor	*next;
-}						t_descriptor;
-
-# define BUFF_SIZE 32
+}					t_descriptor;
 
 void				*ft_memset(void *destination, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -113,6 +116,11 @@ int					ft_detect_space(const char *space, char c);
 int					ft_space_swap(const char *space, const char *str, int i);
 char				*ft_strndup(const char *str, size_t n);
 int					get_next_line(const int fd, char **line);
-double 				ft_percent(double start, double end, double cur);
+double				ft_percent(double start, double end, double cur);
+
+int					ft_has_prefix(const char *str, int base);
+int					ft_isdigit_base(char c, int base);
+int					ft_isnumber(char *str, int base);
+int					ft_atoi_base(const char *str, int base);
 
 #endif

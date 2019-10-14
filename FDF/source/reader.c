@@ -6,17 +6,40 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 11:53:08 by daron             #+#    #+#             */
-/*   Updated: 2019/09/25 16:09:53 by daron            ###   ########.fr       */
+/*   Updated: 2019/10/02 17:56:06 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void pars_stack(t_coord **head, t_map *map)
+void		push(t_coord **head, t_coord *new)
 {
-	t_coord *top;
-	int i;
-	size_t size;
+	if (head)
+	{
+		if (new)
+			new->next = *head;
+		*head = new;
+	}
+}
+
+t_coord		*pop(t_coord **head)
+{
+	t_coord	*top;
+
+	top = NULL;
+	if (head && *head)
+	{
+		top = *head;
+		*head = (*head)->next;
+	}
+	return (top);
+}
+
+void		pars_stack(t_coord **head, t_map *map)
+{
+	t_coord	*top;
+	int		i;
+	size_t	size;
 
 	size = map->height * map->width * sizeof(int);
 	if (!(map->z_coordinate = (int*)malloc(size)))
@@ -37,9 +60,9 @@ void pars_stack(t_coord **head, t_map *map)
 	}
 }
 
-void pars_string(t_map *map, t_coord **head, char **mas)
+void		pars_string(t_map *map, t_coord **head, char **mas)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (mas[i])
@@ -50,13 +73,13 @@ void pars_string(t_map *map, t_coord **head, char **mas)
 	if (map->width == 0)
 		map->width = i;
 	else if (map->width != i)
-		kill_pr("The Map have error");
+		kill_pr("The Map have error <pars_string>");
 }
 
-void reader(int fd, t_map *map, t_coord **head)
+void		reader(int fd, t_map *map, t_coord **head)
 {
-	char *line;
-	char **mas;
+	char	*line;
+	char	**mas;
 
 	*head = NULL;
 	while (get_next_line(fd, &line) == 1)
@@ -68,15 +91,6 @@ void reader(int fd, t_map *map, t_coord **head)
 		ft_strdel(&line);
 		map->height++;
 	}
-	/*printf("map->height = %d map->width = %d\n", map->height, map->width);
-	int i = 0;
-	t_coord *ptr;
-	while (i < map->height * map->width)
-	{
-		ptr = pop(head);
-		printf("%d\n", ptr->z);
-		i++;
-	}*/
 	if (!(*head))
 		kill_pr("Cant't read the map");
 }
