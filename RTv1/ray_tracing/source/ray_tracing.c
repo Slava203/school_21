@@ -6,13 +6,13 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 12:38:16 by daron             #+#    #+#             */
-/*   Updated: 2019/10/27 13:23:09 by daron            ###   ########.fr       */
+/*   Updated: 2019/10/30 15:13:44 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RTv1.h"
 
-void get_direction(t_point point, t_ray *ray, t_sdl *sdl)
+void get_direction(t_point point, t_ray *ray, t_sdl *sdl) // задаем напрвление луча чтобы он смотрел в заданный пиксель
 {
 	ray->dir.x = point.x * (V_WIDTH / (double)W_WIDTH);
 	ray->dir.y = point.y * (V_HEIGHT / (double)W_HEIGHT);
@@ -23,7 +23,7 @@ void get_direction(t_point point, t_ray *ray, t_sdl *sdl)
 	//printf("ray->dir = (%g %g %g)\n", ray->dir.x, ray->dir.y, ray->dir.z);
 }
 
-void set_color(t_sdl *sdl, int ind, int x, int y)
+void set_color(t_sdl *sdl, int ind, int x, int y) // задаем и выводим цвет фигуры в заисимости от интенсивности точки которую мы получили
 {
 	double p;
 	int k;
@@ -49,7 +49,7 @@ void set_color(t_sdl *sdl, int ind, int x, int y)
 	SDL_RenderDrawPoint(sdl->render, x, y);
 }
 
-void intersection(t_ray *ray, t_sdl *sdl, int x, int y)
+void intersection(t_ray *ray, t_sdl *sdl, int x, int y) // нахождения пересечения луча с объектами
 {
 	int obj_ind;
 
@@ -78,7 +78,7 @@ void intersection(t_ray *ray, t_sdl *sdl, int x, int y)
 	set_color(sdl, sdl->clos_obj, x, y);
 }
 
-void ray_tracing_init(t_sdl *sdl, t_ray *ray)
+void ray_tracing_init(t_sdl *sdl, t_ray *ray) // расчет направления луча идущего из камеры в заданный пиксель
 {
 	int x;
 	int y;

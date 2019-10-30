@@ -10,19 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72012876-793b-40a0-99f5-609f67a45c11" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/includes/fractol.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/includes/fractol.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/libft/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/libft/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/libft/includes/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/libft/includes/libft.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/libft/source/ft_pow.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/libft/source/ft_pow.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/libft/source/projection_point_to_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/libft/source/projection_point_to_line.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/source/button_control.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/source/button_control.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/source/buttons.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/source/buttons.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/source/different_fractols.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/source/different_fractols.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/source/draw_fractol.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/source/draw_fractol.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/source/init_functions.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/source/init_functions.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/source/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/source/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fract’ol/source/mouse_movement.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../fract’ol/source/mouse_movement.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RTv1" beforeDir="false" afterPath="$PROJECT_DIR$/RTv1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/light.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/light.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/ray_tracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/ray_tracing.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/ray_tracing.o" beforeDir="false" afterPath="$PROJECT_DIR$/source/ray_tracing.o" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,112 +22,79 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/source/main.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1605">
-                  <caret line="107" selection-start-line="107" selection-end-line="107" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/scene/scene.2">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="10" selection-end-line="18" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/source/ray_tracing.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1410">
-                  <caret line="94" column="63" selection-start-line="94" selection-start-column="63" selection-end-line="94" selection-end-column="63" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/includes/RTv1.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2925">
-                  <caret line="195" column="6" selection-start-line="195" selection-start-column="6" selection-end-line="195" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/source/sphere.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/source/plane.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Desktop/test333/scenes/scene1.rt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="26" selection-start-line="26" selection-end-line="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$USER_HOME$/Desktop/test333/srcs/main.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-149">
-                  <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Desktop/test333/libft/ft_strjoin.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="407">
-                  <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Desktop/test333/includes/rtv1.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="416">
-                  <caret line="86" column="25" lean-forward="true" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="649">
+              <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scene/scene.2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="9" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/ray_tracing.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-64">
+              <caret line="25" column="137" selection-start-line="25" selection-start-column="137" selection-end-line="25" selection-end-column="137" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/scene_parser.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="158" column="30" lean-forward="true" selection-start-line="158" selection-start-column="30" selection-end-line="158" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/RTv1.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="126" column="26" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/plane.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/light.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ambient</find>
       <find>light</find>
       <find>get_d</find>
+      <find>ft_add_light</find>
+      <find>ft_add_cyl_cone</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,10 +138,8 @@
         <option value="$USER_HOME$/Desktop/test_rtv1/src/light.c" />
         <option value="$USER_HOME$/Desktop/test_rtv1/src/ray_trace.c" />
         <option value="$PROJECT_DIR$/source/sphere.c" />
-        <option value="$PROJECT_DIR$/source/light.c" />
         <option value="$PROJECT_DIR$/source/cylinder.c" />
         <option value="$PROJECT_DIR$/scene/sphere" />
-        <option value="$PROJECT_DIR$/source/ray_tracing.c" />
         <option value="$PROJECT_DIR$/source/plane.c" />
         <option value="$PROJECT_DIR$/scene/plane" />
         <option value="$PROJECT_DIR$/scene/scene.3" />
@@ -191,12 +147,17 @@
         <option value="$PROJECT_DIR$/scene/scene.5" />
         <option value="$PROJECT_DIR$/ftvector/source/vec_sum.c" />
         <option value="$PROJECT_DIR$/scene/scene.2" />
+        <option value="$USER_HOME$/Desktop/test333/libft/ft_strjoin.c" />
+        <option value="$USER_HOME$/Desktop/test333/libft/ft_atoi.c" />
+        <option value="$USER_HOME$/Desktop/test333/srcs/objects.c" />
+        <option value="$PROJECT_DIR$/source/ray_tracing.c" />
+        <option value="$PROJECT_DIR$/source/light.c" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="188" />
-    <option name="y" value="85" />
+    <option name="x" value="100" />
+    <option name="y" value="61" />
     <option name="width" value="2005" />
     <option name="height" value="1236" />
   </component>
@@ -213,11 +174,6 @@
             <path>
               <item name="ray_tracing" type="b2602c69:ProjectViewProjectNode" />
               <item name="ray_tracing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ray_tracing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ray_tracing" type="462c0819:PsiDirectoryNode" />
-              <item name="scene" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ray_tracing" type="b2602c69:ProjectViewProjectNode" />
@@ -287,16 +243,15 @@
       <workItem from="1572273891064" duration="2390000" />
       <workItem from="1572356164020" duration="363000" />
       <workItem from="1572364690078" duration="5000" />
-      <workItem from="1572425425121" duration="1938000" />
+      <workItem from="1572425425121" duration="9072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70218000" />
+    <option name="totallyTimeSpent" value="77352000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="188" y="85" width="2005" height="1236" extended-state="1" />
-    <editor active="true" />
+    <frame x="100" y="61" width="2005" height="1236" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16760062" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -344,77 +299,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ftvector/includes/ftvector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ftvector/source/vec_rot_xyz.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/test_rtv1/vec_op/vec_rotz.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/test_rtv1/vec_op/vec_roty.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/test_rtv1/vec_op/vec_rotx.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ftvector/source/vec_rot_x.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ftvector/source/vec_rot_z.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ftvector/source/vec_rot_y.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ftvector/source/vec_dot.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ftvector/source/vec_len.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/test_rtv1/vec_op/vec_len.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/test_rtv1/vec_op/vec_dot.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/test_rtv1/vec_op/vec_norm.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ftvector/source/vec_scale.c">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -535,20 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/ray_tracing.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="94" column="63" selection-start-line="94" selection-start-column="63" selection-end-line="94" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scene/scene.4">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -556,24 +426,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/RTv1.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2925">
-          <caret line="195" column="6" selection-start-line="195" selection-start-column="6" selection-end-line="195" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ftvector/source/vec_sum.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/sphere.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -601,24 +457,10 @@
     <entry file="file://$PROJECT_DIR$/source/camera.c">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scene/scene.2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/light.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="101" column="39" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/plane.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
-          <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -629,31 +471,152 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/test333/scenes/scene1.rt">
+    <entry file="file://$USER_HOME$/Desktop/test333/libft/ft_linelen.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/srcs/add2.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="-554">
+          <caret line="28" column="64" lean-forward="true" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/srcs/add.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/srcs/lighting.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="133" column="29" selection-start-line="133" selection-start-column="29" selection-end-line="133" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/test333/libft/ft_strjoin.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        <state relative-caret-position="645">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/test333/includes/rtv1.h">
+    <entry file="file://$USER_HOME$/Desktop/test333/scenes/scene2.rt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/scenes/scene3.rt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/libft/ft_atoi.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="86" column="25" lean-forward="true" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/scenes/scene1.rt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/test333/srcs/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+        <state relative-caret-position="1062">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/srcs/parser.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/srcs/objects.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="47" column="67" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/scenes/scene5.rt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="22" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test333/includes/rtv1.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene/scene.2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/scene_parser.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="158" column="30" lean-forward="true" selection-start-line="158" selection-start-column="30" selection-end-line="158" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/sphere.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/RTv1.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="126" column="26" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/ray_tracing.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="25" column="137" selection-start-line="25" selection-start-column="137" selection-end-line="25" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/light.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
         </state>
       </provider>
     </entry>

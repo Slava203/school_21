@@ -25,7 +25,7 @@ void init_light(t_sdl *sdl, char **param)
 	sdl->light_counter++;
 }
 
-static int		shadow_init(t_light *light, t_sdl *sdl)
+static int		shadow_init(t_light *light, t_sdl *sdl) // смотрим еть ли в точке тень
 {
 	int		ind;
 	double	max_t;
@@ -47,7 +47,7 @@ static int		shadow_init(t_light *light, t_sdl *sdl)
 			t = get_cone_intersection(light->p, dir, &sdl->obj[ind]);
 		else if (sdl->obj[ind].name == CYLINDER_ID)
 			t = get_cylinder_intersection(light->p, dir, &sdl->obj[ind]);
-		if (t > 0.00001 && t < max_t)
+		if (t > EPS && t < max_t)
 			return (1);
 		ind++;
 	}
@@ -58,7 +58,7 @@ static int		shadow_init(t_light *light, t_sdl *sdl)
  ** v - normal vector
  ** s - specular
  */
-static void get_intensity(t_sdl *sdl, t_light *light, t_vector v, double s)
+static void get_intensity(t_sdl *sdl, t_light *light, t_vector v, double s) // расчитываем интенсивность точки и ее отражательный эффект
 {
 	double	n_dot_l;
 	double	r_dot_v;
@@ -89,7 +89,7 @@ static void get_intensity(t_sdl *sdl, t_light *light, t_vector v, double s)
 	}
 }
 
-void light(t_sdl *sdl, t_ray *ray)
+void light(t_sdl *sdl, t_ray *ray) // находим нормаль к объекту с которым есть пересечение в текущей точке
 {
 	int ind;
 
@@ -99,7 +99,7 @@ void light(t_sdl *sdl, t_ray *ray)
 		while (ind < sdl->light_num)
 		{
 			//printf("ray->dir = (%g %g %g)\n", ray->dir.x, ray->dir.y, ray->dir.z);
-			sdl->light[ind].p = vec_sum(ray->orig, vec_scale(ray->dir, sdl->obj[sdl->clos_obj].t));// луч исходящий тз точки камеры
+			sdl->light[ind].p = vec_sum(ray->orig, vec_scale(ray->dir, sdl->obj[sdl->clos_obj].t));// луч исходящий из точки камеры
 			//printf("sdl->light[ind].p = (%g %g %g)\n", sdl->light[ind].p.x, sdl->light[ind].p.y, sdl->light[ind].p.z);
 			//printf("ray->orig = (%g %g %g)\n", ray->orig.x, ray->orig.y, ray->orig.z);
 			//printf("ray->dir = (%g %g %g)\n", ray->dir.x, ray->dir.y, ray->dir.z);
