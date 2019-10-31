@@ -1,0 +1,23 @@
+scene
+{
+	cam_pos(0 0 -25)
+	cam_dir(0 0 0)
+	ambient(20)
+}
+
+content
+{
+	object(light)
+	{
+		col(0 0 0)
+		pos(3 0 10)
+		int(70)
+	}
+	object(sphere)
+	{
+		col(0 0 255)
+		pos(0 0 15)
+		size(10)
+		spc(100)
+	}
+}
