@@ -6,7 +6,7 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 12:38:16 by daron             #+#    #+#             */
-/*   Updated: 2019/10/31 15:12:26 by daron            ###   ########.fr       */
+/*   Updated: 2019/11/16 14:12:38 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void get_direction(t_point point, t_ray *ray, t_sdl *sdl) // задаем нап
 	//printf("ray->dir = (%g %g %g)\n", ray->dir.x, ray->dir.y, ray->dir.z);
 	//printf("point = {%g %g} dir = {%g %g %g}\n", point.x, point.y, ray->dir.x, ray->dir.y, ray->dir.z);
 	ray->dir = vec_rot_xyz(ray->dir, sdl->cam.rot);
-	//printf("ray->dir = (%g %g %g)\n", ray->dir.x, ray->dir.y, ray->dir.z);
+	printf("ray->dir = (%g %g %g)\n", ray->dir.x, ray->dir.y, ray->dir.z);
 }
 
 void set_color(t_sdl *sdl, t_object *obj, int x, int y) // задаем и выводим цвет фигуры в заисимости от интенсивности точки которую мы получили
@@ -32,7 +32,7 @@ void set_color(t_sdl *sdl, t_object *obj, int x, int y) // задаем и вы�
 	light = sdl->light;
 	while (light)
 	{
-		//printf("ligth_num = %d new_item = %g\n", k, sdl->light[k].new_inten);
+		//printf("light->new_inten = %g ",light->new_inten);
 		if (light->new_inten > 1)
 			light->new_inten = 1;
 		p += light->new_inten;
@@ -40,6 +40,7 @@ void set_color(t_sdl *sdl, t_object *obj, int x, int y) // задаем и вы�
 			p = 1;
 		light = light->next;
 	}
+	//printf("x = %d y = %d p = %g\n", x, y, p);
 	//printf("p = %g\n", p);
 	if (obj != NULL)
 		SDL_SetRenderDrawColor(sdl->render, obj->col.r * p, obj->col.g * p, obj->col.b * p, 255);
@@ -60,6 +61,7 @@ void intersection(t_ray *ray, t_sdl *sdl, int x, int y) // нахождения 
 	obj = sdl->obj;
 	while (obj)
 	{
+		//printf("%d ",obj->name);
 		if (obj->name == SPHERE_ID)
 			sphere_intersection(sdl, ray, obj);
 		else if (obj->name == PLANE_ID)
@@ -76,6 +78,8 @@ void intersection(t_ray *ray, t_sdl *sdl, int x, int y) // нахождения 
 		light(sdl, ray);
 	//printf("ray = (%g %g %g) ", ray->dir.x, ray->dir.y, ray->dir.z);
 	set_color(sdl, sdl->clos_obj, x, y);
+	//printf("sdl->clos_obj->t = %g\n", sdl->clos_obj->t);
+	//printf("\n");
 }
 
 void ray_tracing_init(t_sdl *sdl, t_ray *ray) // расчет направления луча идущего из камеры в заданный пиксель

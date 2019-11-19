@@ -6,7 +6,7 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 15:31:50 by daron             #+#    #+#             */
-/*   Updated: 2019/10/31 14:12:50 by daron            ###   ########.fr       */
+/*   Updated: 2019/10/31 17:32:46 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,16 @@ void	ft_add_light(t_sdl *sdl, int *k, int ind)
 
 static int		shadow_init(t_light *light, t_sdl *sdl) // смотрим еть ли в точке тень
 {
-	int		ind;
 	double	max_t;
 	double	t;
 	t_vector	dir;
 	t_object *obj;
 
-	obj = sdl->obj;
-	ind = 0;
 	t = 0;
 	max_t = vec_len(vec_sub(light->pos, light->p));
 	dir = vec_norm(vec_sub(light->pos, light->p));
 	light->p = vec_sum(light->p, vec_scale(dir, EPS));
+	obj = sdl->obj;
 	while (obj)
 	{
 		if (obj->name == SPHERE_ID)
@@ -112,17 +110,15 @@ static void get_intensity(t_sdl *sdl, t_light *light, t_vector v, double s) // �
 
 void light(t_sdl *sdl, t_ray *ray) // находим нормаль к объекту с которым есть пересечение в текущей точке
 {
-	int ind;
 	t_light *light;
 
-	ind = 0;
 	light = sdl->light;
 	if (sdl->clos_obj != NULL)
 	{
 		while (light)
 		{
 			//printf("ray->dir = (%g %g %g)\n", ray->dir.x, ray->dir.y, ray->dir.z);
-			sdl->light[ind].p = vec_sum(ray->orig, vec_scale(ray->dir, sdl->clos_obj->t));// луч исходящий из точки камеры
+			light->p = vec_sum(ray->orig, vec_scale(ray->dir, sdl->clos_obj->t));// луч исходящий из точки камеры
 			//printf("sdl->light[ind].p = (%g %g %g)\n", sdl->light[ind].p.x, sdl->light[ind].p.y, sdl->light[ind].p.z);
 			//printf("ray->orig = (%g %g %g)\n", ray->orig.x, ray->orig.y, ray->orig.z);
 			//printf("ray->dir = (%g %g %g)\n", ray->dir.x, ray->dir.y, ray->dir.z);

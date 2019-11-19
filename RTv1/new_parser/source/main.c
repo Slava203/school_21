@@ -6,11 +6,44 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 16:08:56 by daron             #+#    #+#             */
-/*   Updated: 2019/10/31 14:26:20 by daron            ###   ########.fr       */
+/*   Updated: 2019/10/31 16:06:58 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RTv1.h"
+
+void my_free(t_sdl *sdl)
+{
+	t_object *obj;
+	t_object *obj_next;
+	t_light *light;
+	t_light *light_next;
+	int ind;
+
+	obj = sdl->obj;
+	while (obj)
+	{
+		obj_next = obj->next;
+		free(obj);
+		obj = obj_next;
+	}
+
+	light = sdl->light;
+	while (light)
+	{
+		light_next = light->next;
+		free(light);
+		light = light_next;
+	}
+
+	ind = -1;
+	while (++ind < sdl->line_count)
+		free(sdl->scene[ind]);
+	free(sdl->scene);
+
+	SDL_DestroyRenderer(sdl->render);
+	SDL_DestroyWindow(sdl->window);
+}
 
 double	get_quadratic_solution(double a, double b, double discriminant)
 {
@@ -108,7 +141,10 @@ int main(int argc, char **argv)
 	while (1)
 		while (SDL_PollEvent(&event))
 			if ((SDL_QUIT == event.type) || (SDL_KEYDOWN == event.type && SDL_SCANCODE_ESCAPE == event.key.keysym.scancode))
+			{
+				my_free(&sdl);
 				exit(0);
+			}
 
 	return (0);
 }

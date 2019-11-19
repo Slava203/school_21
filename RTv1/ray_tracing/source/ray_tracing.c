@@ -6,7 +6,7 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 12:38:16 by daron             #+#    #+#             */
-/*   Updated: 2019/10/30 15:13:44 by daron            ###   ########.fr       */
+/*   Updated: 2019/11/15 12:07:44 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void intersection(t_ray *ray, t_sdl *sdl, int x, int y) // нахождения 
 	}
 	//printf("ray = (%g %g %g) ", ray->dir.x, ray->dir.y, ray->dir.z);
 	set_color(sdl, sdl->clos_obj, x, y);
+	//printf("sdl->clos_obj->t = %g\n", sdl->obj[sdl->clos_obj].t);
 }
 
 void ray_tracing_init(t_sdl *sdl, t_ray *ray) // расчет направления луча идущего из камеры в заданный пиксель
