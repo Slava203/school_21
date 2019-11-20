@@ -8,7 +8,6 @@ SRC = source/main.c \
 		source/cylinder.c \
 		source/check_object.c \
 		source/ray_tracing.c \
-		source/init_function.c \
 		source/light.c \
 		source/event.c
 

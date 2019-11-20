@@ -51,22 +51,3 @@ double get_plane_intersection(t_vector *ray_dir, t_vector *cam_pos, t_object *ob
 		return (-1);
 	return (sdl->t0);
 }
-
-/*t_vector get_plane_normal(t_ray *ray, t_object *obj)
-{
-	if (vec_dot(ray->dir, obj->rot) < 0)
-		return (obj->rot);
-	else
-		return (vec_scale(obj->rot, -1));
-}
-
-void plane_intersection(t_sdl *sdl, t_ray *camera, t_object *obj)
-{
-	obj->rot = vec_norm(obj->rot);
-	obj->t = get_plane_intersection(camera->orig, camera->dir, obj);
-	if (obj->t > 0 && obj->t < sdl->min_t)
-	{
-		sdl->min_t = obj->t;
-		sdl->clos_obj = obj;
-	}
-}*/

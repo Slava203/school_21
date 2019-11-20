@@ -18,7 +18,10 @@ void	events(t_sdl *sdl)
 		while (SDL_PollEvent(&sdl->event))
 		{
 			if ((SDL_QUIT == sdl->event.type) || (SDL_SCANCODE_ESCAPE == sdl->event.key.keysym.scancode))
+			{
+				my_free(sdl);
 				exit(0);
+			}
 			else if (SDLK_RETURN == sdl->event.key.keysym.sym)
 				sdl->select_obj = NULL;
 			else if (sdl->event.type == SDL_KEYDOWN && sdl->select_obj == NULL)

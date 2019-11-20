@@ -98,7 +98,7 @@ int main(int argc, char **argv)
 
 	ray_tracing_init(&sdl);
 
-	printf("Camera pos = {%g %g %g}\n rot = {%g %g %g}\n\n", sdl.cam.pos.x, sdl.cam.pos.y, sdl.cam.pos.z, sdl.cam.rot.x, sdl.cam.rot.y, sdl.cam.rot.z);
+	/*printf("Camera pos = {%g %g %g}\n rot = {%g %g %g}\n\n", sdl.cam.pos.x, sdl.cam.pos.y, sdl.cam.pos.z, sdl.cam.rot.x, sdl.cam.rot.y, sdl.cam.rot.z);
 	printf("Ambient = %g\n\n", sdl.ambient);
 
 	t_light *light;
@@ -138,7 +138,7 @@ int main(int argc, char **argv)
 
 		object = object->next;
 	}
-
+	*/
 	events(&sdl);
 
 	return (0);

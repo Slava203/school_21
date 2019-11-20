@@ -46,36 +46,16 @@ double get_sphere_intersection(t_vector *ray_dir, t_vector *cam_pos, t_object *o
 {
 	double b;
 	double c;
+	double a;
 	double discriminant;
 
 	sdl->dist = vec_sub(cam_pos, &obj->pos);
-	sdl->a = vec_dot(ray_dir, ray_dir);
+	a = vec_dot(ray_dir, ray_dir);
 	b = 2 * vec_dot(ray_dir, &sdl->dist);
 	c = vec_dot(&sdl->dist, &sdl->dist) - pow(obj->r, 2);//Проверь это место
-	discriminant = pow(b, 2) - 4 * sdl->a * c;
+	discriminant = pow(b, 2) - 4 * a * c;
 	if (discriminant < 0)
 		return (-1);
-	sdl->t0 = get_quadratic_solution(sdl->a, b , discriminant);
+	sdl->t0 = get_quadratic_solution(a, b , discriminant);
 	return (sdl->t0);
 }
-
-/*t_vector get_sphere_normal(t_ray *ray, t_object *obj)
-{
-	t_vector op;
-
-	op = vec_sum(ray->orig, vec_scale(ray->dir, obj->t));
-	op = vec_norm(vec_sub(op, obj->pos));
-	if (vec_dot(ray->dir, op) > EPS)
-		op = vec_scale(op, -1);
-	return (op);
-}
-
-void sphere_intersection(t_sdl *sdl, t_ray *camera, t_object *obj)
-{
-	obj->t = get_sphere_intersection(camera->orig, camera->dir, obj);
-	if (obj->t > 0 && obj->t < sdl->min_t)
-	{
-		sdl->min_t = obj->t;
-		sdl->clos_obj = obj;
-	}
-}*/

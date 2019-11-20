@@ -47,7 +47,6 @@ void			ft_add_cyl_cone(t_sdl *sdl, int *k, int name ,int ind)
 	link->name = name;
 	link->next = NULL;
 	sdl->obj = ft_add_object_link(sdl, link);
-	sdl->light_counter++;
 	*k += 8;
 }
 
@@ -55,43 +54,17 @@ double get_cone_intersection(t_vector *ray_dir, t_vector *cam_pos, t_object *obj
 {
 	double	b;
 	double	c;
+	double	a;
 	double discriminant;
 
 	sdl->dist = vec_sub(cam_pos, &obj->pos);
 	obj->rot = vec_norm(&obj->rot);
-	sdl->a = vec_dot(ray_dir, ray_dir) - (1 + pow(tan(obj->r), 2)) * pow(vec_dot(ray_dir, &obj->rot), 2);
+	a = vec_dot(ray_dir, ray_dir) - (1 + pow(tan(obj->r), 2)) * pow(vec_dot(ray_dir, &obj->rot), 2);
 	b = 2 * (vec_dot(ray_dir, &sdl->dist) - (1 + pow(tan(obj->r), 2)) * vec_dot(ray_dir, &obj->rot) * vec_dot(&sdl->dist, &obj->rot));
 	c = vec_dot(&sdl->dist, &sdl->dist) - (1 + pow(tan(obj->r), 2)) * pow(vec_dot(&sdl->dist, &obj->rot), 2);
-	discriminant = b * b - 4 * sdl->a * c;
+	discriminant = b * b - 4 * a * c;
 	if (discriminant < 0)
 		return (-1);
-	sdl->t0 = get_quadratic_solution(sdl->a, b, discriminant);
+	sdl->t0 = get_quadratic_solution(a, b, discriminant);
 	return (sdl->t0);
 }
-
-/*t_vector get_cone_normal(t_ray *ray, t_object *obj)
-{
-	double	m;
-	t_vector	n;
-	t_vector	p;
-
-	m = obj->t * vec_dot(ray->dir, obj->rot) +
-		vec_dot(vec_sub(ray->orig, obj->pos), obj->rot);
-	p = vec_sum(ray->orig, vec_scale(ray->dir, obj->t));
-	n = vec_scale(vec_scale(obj->rot, m), (1 + obj->r * obj->r));
-	n = vec_norm(vec_sub(vec_sub(p, obj->pos), n));
-	if (vec_dot(ray->dir, n) > EPS)
-		n = vec_scale(n, -1);
-	return (n);
-}
-
-void cone_intersection(t_sdl *sdl, t_ray *camera, t_object *obj)
-{
-	obj->t = get_cone_intersection(camera->orig, camera->dir, obj);
-	obj->rot = vec_norm(obj->rot);
-	if (obj->t > 0 && obj->t < sdl->min_t)
-	{
-		sdl->min_t = obj->t;
-		sdl->clos_obj = obj;
-	}
-}*/

@@ -6,7 +6,7 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 15:31:50 by daron             #+#    #+#             */
-/*   Updated: 2019/11/19 17:13:02 by daron            ###   ########.fr       */
+/*   Updated: 2019/11/20 16:03:20 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	ft_add_light(t_sdl *sdl, int *k, int ind)
 		kill_all("Light not in well format 5 <ft_add_light>");
 
 	link->next = NULL;
-	sdl->light_counter++;
 	sdl->light = ft_add_light_link(sdl, link);
 	*k += 6;
 }
@@ -53,7 +52,6 @@ t_vector object_norm(t_sdl *sdl, t_object *obj, t_vector pos)
 	t_vector norm;
 	t_vector tmp;
 	t_vector tmp2;
-
 
 	if (obj->name == CONE_ID || obj->name == CYLINDER_ID)
 	{
@@ -74,6 +72,7 @@ int		shadow(t_sdl *sdl, t_object *obj, t_light *light, t_vector pos)
 {
 	t_object	*head;
 	t_vector	dist;
+	float d;
 
 	head = sdl->obj;
 	dist = vec_sub(&light->pos, &pos);
@@ -84,14 +83,14 @@ int		shadow(t_sdl *sdl, t_object *obj, t_light *light, t_vector pos)
 		if (head != obj)
 		{
 			if (head->name == SPHERE_ID)
-				sdl->a = get_sphere_intersection(&dist, &pos, head, sdl);
+				d = get_sphere_intersection(&dist, &pos, head, sdl);
 			else if (head->name == CYLINDER_ID)
-				sdl->a = get_cylinder_intersection(&dist, &pos, head, sdl);
+				d = get_cylinder_intersection(&dist, &pos, head, sdl);
 			else if (head->name == CONE_ID)
-				sdl->a = get_cone_intersection(&dist, &pos, head, sdl);
+				d = get_cone_intersection(&dist, &pos, head, sdl);
 			else if (head->name == PLANE_ID)
-				sdl->a = get_plane_intersection(&dist, &pos, head, sdl);
-			if (sdl->a > 0.0001 && sdl->a < sdl->t)
+				d = get_plane_intersection(&dist, &pos, head, sdl);
+			if (d > EPS && d < sdl->t)
 				return (1);
 		}
 		head = head->next;
@@ -105,9 +104,6 @@ float *transfer_light(t_object *obj, t_light *light, float *tab, float d)
 	tab[0] += tab[3] * (obj->col.r / 255) * (light->col.r / 255);
 	tab[1] += tab[3] * (obj->col.g / 255) * (light->col.g / 255);
 	tab[2] += tab[3] * (obj->col.b / 255) * (light->col.b / 255);
-	//printf("obj.col = (%g %g %g) light.col = (%g %g %g)\n", obj->col.r, obj->col.g, obj->col.b, light->col.r, light->col.g, light->col.b);
-	//printf("tab[] = (%g %g %g %g)\n",tab[0], tab[1], tab[2], tab[3]);
-	//printf("%g %g %g\n\n", (float)(tab[3] * (obj->col.r / 255) * (light->col.r / 255)), tab[3] * (obj->col.g / 255) * (light->col.g / 255), tab[3] * (obj->col.b / 255) * (light->col.b / 255));
 	return (tab);
 }
 
@@ -128,7 +124,6 @@ float *gloss(t_sdl *sdl, t_object *obj, float *tab, t_vector *dist, float d)
 			spec = pow(tmp, obj->specular) * 4 * d;
 			spec = ft_clamp(spec, 0.0, 1.0);
 		}
-		//printf("spec = %g\n", spec);
 		tab[1] += spec;
 		tab[2] += spec;
 		tab[3] += spec;
@@ -176,7 +171,9 @@ t_object	*ref_init(t_sdl *sdl, t_object *obj, t_vector *pos)
 	tmp2 = ref_inter(sdl, sdl->obj, obj, *pos);
 	if (!tmp2)
 		return (NULL);
-	*pos = (t_vector){pos->x + sdl->t * sdl->ref.x, pos->y + sdl->t * sdl->ref.y, pos->z + sdl->t * sdl->ref.z};
+	*pos = (t_vector){pos->x + sdl->t * sdl->ref.x,
+				   pos->y + sdl->t * sdl->ref.y,
+				   pos->z + sdl->t * sdl->ref.z};
 	sdl->refpos = (t_vector){sdl->ref.x, sdl->ref.y, sdl->ref.z};
 	sdl->norm = object_norm(sdl, tmp2, *pos);
 	return (tmp2);
@@ -214,7 +211,9 @@ float *calculate_light(t_sdl *sdl, t_object *obj, float *tab, t_light *light)
 	t_vector dist; // вектор из источника света в точку объекта
 	float d;
 
-	pos = (t_vector){sdl->cam.pos.x + sdl->t * sdl->ray_dir.x, sdl->cam.pos.y + sdl->t * sdl->ray_dir.y, sdl->cam.pos.z + sdl->t * sdl->ray_dir.z};
+	pos = (t_vector){sdl->cam.pos.x + sdl->t * sdl->ray_dir.x,
+				  sdl->cam.pos.y + sdl->t * sdl->ray_dir.y,
+				  sdl->cam.pos.z + sdl->t * sdl->ray_dir.z};
 	sdl->norm = object_norm(sdl, obj, pos);
 	while (light != NULL)
 	{
@@ -225,10 +224,8 @@ float *calculate_light(t_sdl *sdl, t_object *obj, float *tab, t_light *light)
 		if (shadow(sdl, obj, light, pos) == 0)
 			tab[3] += ft_clamp(vec_dot(&dist, &sdl->norm), 0.0, 1.0);
 		tab = transfer_light(obj, light, tab, d);
-		//printf("light.col = (%d %d %d)\n", light->col.r,light->col.g, light->col.b);
-		//printf("tab[] = (%g %g %g %g)\n",tab[0], tab[1], tab[2], tab[3]);
+
 		tab = gloss(sdl, obj, tab, &dist , d);
-		//printf("tab[] = (%g %g %g %g)\n",tab[0], tab[1], tab[2], tab[3]);
 		light = light->next;
 	}
 	sdl->refpos = (t_vector){sdl->ray_dir.x, sdl->ray_dir.y, sdl->ray_dir.z};
