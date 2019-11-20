@@ -6,7 +6,7 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 15:55:27 by daron             #+#    #+#             */
-/*   Updated: 2019/11/18 19:56:54 by daron            ###   ########.fr       */
+/*   Updated: 2019/11/20 13:46:51 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,14 @@ void scene_parser(t_sdl *sdl, char *scene_name)
 	sdl->light = NULL;
 
 	sdl->ambient = 0;
-	sdl->dital = 2;
+	sdl->dital = 1;
 
 	sdl->gloss_activ = 0;
 	sdl->reflect_count = 0;
 
 	sdl->pref = 1;
+
+	sdl->select_obj = NULL;
 
 	string_parser(sdl);
 

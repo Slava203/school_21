@@ -6,7 +6,7 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 16:20:37 by daron             #+#    #+#             */
-/*   Updated: 2019/11/19 16:43:48 by daron            ###   ########.fr       */
+/*   Updated: 2019/11/20 14:29:53 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ typedef struct		s_object
 	double			r;
 	int				name;
 
-	double			specular;
+	float			specular;
 
 	double			t;
 
@@ -176,6 +176,8 @@ typedef struct		s_sdl
 	t_vector 			j;
 	t_vector 			k;
 
+	t_object		*select_obj;
+
 }					t_sdl;
 
 /*
@@ -204,6 +206,7 @@ double get_cylinder_intersection(t_vector *ray_dir, t_vector *cam_pos, t_object 
 double get_cone_intersection(t_vector *ray_dir, t_vector *cam_pos, t_object *obj, t_sdl *sdl);
 double get_plane_intersection(t_vector *ray_dir, t_vector *cam_pos, t_object *obj, t_sdl *sdl);
 
+t_object *intersection(t_sdl *sdl, t_vector *ray_dir, t_vector *cam_pos);
 
 t_point init_point(double x, double y);
 
@@ -230,7 +233,19 @@ float *transfer_light(t_object *obj, t_light *light, float *tab, float d);
 float *gloss(t_sdl *sdl, t_object *obj, float *tab, t_vector *dist, float d);
 
 void	events(t_sdl *sdl);
+
+void mouse_down(t_sdl *sdl);
+
+void key_down(t_sdl *sdl);
 void move_key(t_sdl *sdl);
 void rotate_key(t_sdl *sdl);
+void detail_key(t_sdl *sdl);
+void swithc_gloss(t_sdl *sdl);
+void reflection_key(t_sdl *sdl);
+void swithc_pref(t_sdl *sdl);
+
+void key_down_for_object(t_sdl *sdl);
+void resize_object(t_sdl *sdl);
+void move_object(t_sdl *sdl);
 
 #endif
