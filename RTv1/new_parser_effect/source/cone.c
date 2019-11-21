@@ -6,13 +6,29 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 16:28:05 by daron             #+#    #+#             */
-/*   Updated: 2019/11/17 15:40:17 by daron            ###   ########.fr       */
+/*   Updated: 2019/11/21 16:23:24 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RTv1.h"
 
-void			ft_add_cyl_cone(t_sdl *sdl, int *k, int name ,int ind)
+static void		ft_add_cyl_cone_1(t_sdl *sdl, int *k, int name, t_object *link)
+{
+	int			ind;
+
+	ind = 6;
+	if (ft_strncmp(sdl->scene[*k + 6], "		spc(", 6) != 0)
+		kill_all("Cone not in well format 7 <ft_add_cyl_cone>");
+	link->specular = ft_atoi_n(sdl->scene[*k + 6], &ind);
+	if (sdl->scene[*k + 6][ind] != ')')
+		kill_all("Cone not in well format 8 <ft_add_cyl_cone>");
+	link->name = name;
+	link->next = NULL;
+	sdl->obj = ft_add_object_link(sdl, link);
+	*k += 8;
+}
+
+void			ft_add_cyl_cone(t_sdl *sdl, int *k, int name, int ind)
 {
 	t_object	*link;
 
@@ -29,25 +45,13 @@ void			ft_add_cyl_cone(t_sdl *sdl, int *k, int name ,int ind)
 	link->rot.z = (float)ft_atoi_n(sdl->scene[*k + 4], &ind);
 	if (sdl->scene[*k + 4][ind] != ')')
 		kill_all("Cone not in well format 3 <ft_add_cyl_cone>");
-
 	if (ft_strncmp(sdl->scene[*k + 5], "		size(", 7) != 0)
 		kill_all("Cone not in well format 4 <ft_add_cyl_cone>");
 	ind = 7;
 	link->r = (double)ft_atoi_n(sdl->scene[*k + 5], &ind);
 	if (sdl->scene[*k + 5][ind] != ')')
 		kill_all("Cone not in well format 5 <ft_add_cyl_cone>");
-
-	ind = 6;
-	if (ft_strncmp(sdl->scene[*k + 6], "		spc(", 6) != 0)
-		kill_all("Cone not in well format 7 <ft_add_cyl_cone>");
-	link->specular = ft_atoi_n(sdl->scene[*k + 6], &ind);
-	if (sdl->scene[*k + 6][ind] != ')')
-		kill_all("Cone not in well format 8 <ft_add_cyl_cone>");
-
-	link->name = name;
-	link->next = NULL;
-	sdl->obj = ft_add_object_link(sdl, link);
-	*k += 8;
+	ft_add_cyl_cone_1(sdl, k, name, link);
 }
 
 double get_cone_intersection(t_vector *ray_dir, t_vector *cam_pos, t_object *obj, t_sdl *sdl)

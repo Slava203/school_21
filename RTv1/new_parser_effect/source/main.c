@@ -6,7 +6,7 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 16:08:56 by daron             #+#    #+#             */
-/*   Updated: 2019/11/19 14:44:58 by daron            ###   ########.fr       */
+/*   Updated: 2019/11/21 17:23:27 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,40 +19,6 @@ float   ft_clamp(float value, float min, float max)
 	if (value > max)
 		value = max;
 	return (value);
-}
-
-
-void my_free(t_sdl *sdl)
-{
-	t_object *obj;
-	t_object *obj_next;
-	t_light *light;
-	t_light *light_next;
-	int ind;
-
-	obj = sdl->obj;
-	while (obj)
-	{
-		obj_next = obj->next;
-		free(obj);
-		obj = obj_next;
-	}
-
-	light = sdl->light;
-	while (light)
-	{
-		light_next = light->next;
-		free(light);
-		light = light_next;
-	}
-
-	ind = -1;
-	while (++ind < sdl->line_count)
-		free(sdl->scene[ind]);
-	free(sdl->scene);
-
-	SDL_DestroyRenderer(sdl->render);
-	SDL_DestroyWindow(sdl->window);
 }
 
 double	get_quadratic_solution(double a, double b, double discriminant)
@@ -78,6 +44,8 @@ int				kill_all(char *message)
 
 void sdl_initialize(t_sdl *sdl)
 {
+	//if (TTF_Init() == -1)
+	//	kill_all("Can't initialize TTF <sdl_initialize>");
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		kill_all("Can't initialize SDL <sdl_initialize>");
 	if (!(sdl->window = SDL_CreateWindow("RTv1", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, W_WIDTH, W_HEIGHT, SDL_WINDOW_SHOWN)))

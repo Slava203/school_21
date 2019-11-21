@@ -6,7 +6,7 @@
 /*   By: daron <daron@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 15:55:27 by daron             #+#    #+#             */
-/*   Updated: 2019/11/20 13:54:20 by daron            ###   ########.fr       */
+/*   Updated: 2019/11/21 15:59:07 by daron            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static char		*ft_getbuf(char *scene_name, int *line_count)
 {
-	int		fd;
-	char	*buf;
-	char	*line;
+	int			fd;
+	char		*buf;
+	char		*line;
 
 	buf = ft_strnew(1);
 	if ((fd = open(scene_name, O_RDONLY)) == -1)
@@ -30,9 +30,9 @@ static char		*ft_getbuf(char *scene_name, int *line_count)
 
 static char		**ft_getscene(char *buf, int line_count, int j)
 {
-	int		ind;
-	int		k;
-	char	**scene;
+	int			ind;
+	int			k;
+	char		**scene;
 
 	k = 0;
 	if (!buf)
@@ -54,9 +54,9 @@ static char		**ft_getscene(char *buf, int line_count, int j)
 	return (scene);
 }
 
-void scene_parser(t_sdl *sdl, char *scene_name)
+void			scene_parser(t_sdl *sdl, char *scene_name)
 {
-	char *buf;
+	char		*buf;
 
 	sdl->line_count = 0;
 	buf = ft_getbuf(scene_name, &(sdl->line_count));

@@ -9,7 +9,12 @@ SRC = source/main.c \
 		source/check_object.c \
 		source/ray_tracing.c \
 		source/light.c \
-		source/event.c
+		source/event.c \
+		source/mouse.c \
+		source/key_for_object.c \
+		source/key_for_cam.c \
+		source/key_for_other.c \
+		source/additional_function.c
 
 OBJ = $(SRC:.c=.o)
 LIBS = libft/libft.a ftvector/ftvector.a
