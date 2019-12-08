@@ -35,9 +35,9 @@ scene
 
 This project can render such geometric shapes:  
 - Sphere;
-- Infinite Plane;
-- Infinite Cylinder;
-- Infinite Cone. 
+- Plane;
+- Cylinder;
+- Cone. 
 ```
 
 ```
