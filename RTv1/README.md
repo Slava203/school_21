@@ -1,4 +1,4 @@
-<img src="https://github.com/Slava203/school_21/tree/master/RTv1/OpenCL_Log.png"/>
+<img src="https://github.com/Slava203/school_21/tree/master/RTv1/OpenCL_Log.png">
 
 RTv1
 =====================
