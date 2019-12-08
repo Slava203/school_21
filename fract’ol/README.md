@@ -23,6 +23,39 @@ Different colors patterns.
 $> make
 $> ./fractol fractol_name
 ```
+Control
+-----------------------------------
+<table width="100%">
+<thead>
+<tr>
+<td width="40%" height="60px" align="center" cellpadding="0">
+<strong>Description</strong>
+</td>
+<td width="10%" align="center" cellpadding="0">
+<span style="width:70px">&nbsp;</span><strong>Key(s)</strong><span style="width:50px">&nbsp;</span>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="top" height="30px">Close the program</td>
+<td valign="top" align="center"><kbd>&nbsp;esc&nbsp;</kbd></td>
+</tr>
+<tr>
+<td valign="top" height="30px">Move fractol along X axis</td>
+<td valign="top" align="center"><kbd>&nbsp;◄&nbsp;</kbd> <kbd>&nbsp;►&nbsp;</kbd></td>
+</tr>
+<tr>
+<td valign="top" height="30px">Move fractol along Y axis</td>
+<td valign="top" align="center"><kbd>&nbsp;▲&nbsp;</kbd> <kbd>&nbsp;▼&nbsp;</kbd></td>
+</tr>
+<tr>
+<td valign="top" height="30px">Increase/decrease fractol iteration</td>
+<td valign="top" align="center"><kbd>&nbsp;+&nbsp;</kbd> <kbd>&nbsp;-&nbsp;</kbd></td>
+</tr>
+</tbody>
+</table>
+
 
 ## Pictures
 ### Mandelbrot
