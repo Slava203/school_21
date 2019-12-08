@@ -57,6 +57,10 @@ Control
 <td valign="top" height="30px">Change color scheme</td>
 <td valign="top" align="center"><kbd>&nbsp;*&nbsp;</kbd></td>
 </tr>
+<tr>
+<td valign="top" height="30px">To open the button menu</td>
+<td valign="top" align="center"><kbd>&nbsp;H&nbsp;</kbd></td>
+</tr>
 </tbody>
 </table>
 
