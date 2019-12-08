@@ -1,14 +1,17 @@
 Fractol
 --------------------------------------------
 
-## Description
-
-2nd project of the Graphic Branch of 42.
 Fractol is a project aimed at exploring fractals, mathematical sets that exhibit a repeating pattern displayed at every scale.
+![main tag](image/main.png)
 
 ## Features
 
-Multiple fractals : Mandelbrot, Julia, BurningShip.
+Multiple fractals : 
+  - Mandelbrot;
+  - Julia;
+  - Mandelbar;
+  - Celtic Mandelbrot;
+  - Perpendicular Mandelbrot.
 Increase and decrease max iteration for shape calculation.
 Zoom and unzoom.
 Different colors patterns.
@@ -17,21 +20,16 @@ Different colors patterns.
 
 ```
 $> make
-$> ./fractol mandelbrot
-$> ./fractol julia
-$> ./fractol burningship
+$> ./fractol fractol_name
 ```
 
 ## Pictures
 ### Mandelbrot
 
-![alt tag](https://raw.githubusercontent.com/GlThibault/pics/master/fractol_mandelbrot.png)
-![alt tag](https://raw.githubusercontent.com/GlThibault/pics/master/fractol_mandelbrot2.png)
+![alt tag](image/Mandel_ex1.png)
+![alt tag](image/Mandel_ex2.png)
 
 ### Julia
-![alt tag](https://raw.githubusercontent.com/GlThibault/pics/master/fractol_julia.png)
-![alt tag](https://raw.githubusercontent.com/GlThibault/pics/master/fractol_julia2.png)
+![alt tag](image/Julia_ex1.png)
+![alt tag](image/Julia_ex2.png)
 
-### BurningShip
-![alt tag](https://raw.githubusercontent.com/GlThibault/pics/master/fractol_burningship.png)
-![alt tag](https://raw.githubusercontent.com/GlThibault/pics/master/fractol_burningship2.png)
