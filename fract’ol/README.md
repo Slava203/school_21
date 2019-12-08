@@ -12,6 +12,7 @@ Multiple fractals :
   - Mandelbar;
   - Celtic Mandelbrot;
   - Perpendicular Mandelbrot.
+
 Increase and decrease max iteration for shape calculation.
 Zoom and unzoom.
 Different colors patterns.
