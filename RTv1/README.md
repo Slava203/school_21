@@ -15,9 +15,9 @@ Clone or download this repository and run `make` in command line while in the ro
 
 ## Scene Syntax
 
-scene
+`scene
 {
   cam_pos(x_coordinate y_coordinate z_coordinate)
   cam_dir(x_direction y_direction z_direction)
   ambient(level_of_ambient)
-}
+}`
