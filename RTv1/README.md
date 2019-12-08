@@ -5,3 +5,11 @@ RTv1 is a simple ray tracing program. The project was developed as a part of 42 
 It parses a 3D scene from a file and applies ray tracing algorithm to render the given scene.  
 
 <img src="https://github.com/Slava203/school_21/tree/master/RTv1/image/Demo1.png">
+
+## Installation
+Clone or download this repository and run `make` in command line while in the root of the repository. This will build executable called `RTv1`. 
+
+## Usage
+`./RTv1 [filename]`  
+`filename` must contain path to a valid scene.  
+If the scene is not valid, RTv1 will write corresponding error on standard output.
