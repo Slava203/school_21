@@ -16,9 +16,10 @@ Usage
 `./RTv1 [scene_name]`  
 `scne_name` must contain path to a valid scene.If the scene is not valid, RTv1 will write corresponding error on standard output.
 
-Scene Syntax
+Scene
 -----------------------------------
 Scene is a file which describes camera, lights and geometric objects that have to be rendered.
+### Scene Syntax
 ```
 scene
 {
@@ -31,13 +32,56 @@ scene
   Add object
 }
 ```
-### Object Syntax
+### Object
 
 This project can render such geometric shapes:  
+- Light;
 - Sphere;
 - Plane;
 - Cylinder;
-- Cone. 
+- Cone.
+#### Light Syntax
 ```
+object(light)
+{
+  col(r_component g_component b_component)
+  pos(x_coordinate y_coordinate z_coordinate)
+  int(15)
+}
+```
+#### Object Syntax
+```
+object(plane)
+{
+  col(r_component g_component b_component)
+  pos(x_coordinate y_coordinate z_coordinate)
+  rot(x_direction y_direction z_direction)
+  spc(reflection_level)
+}
 
+object(sphere)
+{
+  col(r_component g_component b_component)
+  pos(x_coordinate y_coordinate z_coordinate)
+  size(radius)
+  spc(reflection_level)
+}
+
+object(cylinder)
+{
+  col(r_component g_component b_component)
+  pos(x_coordinate y_coordinate z_coordinate)
+  rot(x_direction y_direction z_direction)
+  size(radius)
+  spc(reflection_level)
+}
+
+object(cone)
+{
+  col(r_component g_component b_component)
+  pos(x_coordinate y_coordinate z_coordinate)
+  rot(x_direction y_direction z_direction)
+  size(radius)
+  spc(reflection_level)
+}
 ```
