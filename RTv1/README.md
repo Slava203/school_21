@@ -141,15 +141,11 @@ Control
 </tr>
 <tr>
 <td valign="top" height="30px">Increase/decrease the anti-aliasing (1 by default)</td>
-<td valign="top" align="center"><kbd>&nbsp;X&nbsp;</kbd> <kbd>&nbsp;Z&nbsp;</kbd></td>
+<td valign="top" align="center"><kbd>&nbsp;O&nbsp;</kbd> <kbd>&nbsp;P&nbsp;</kbd></td>
 </tr>
 <tr>
-<td valign="top" height="30px">Activate/deactivate reflections on planes only</td>
-<td valign="top" align="center"><kbd>&nbsp;E&nbsp;</kbd></td>
-</tr>
-<tr>
-<td valign="top" height="30px">Hide/show HUD</td>
-<td valign="top" align="center"><kbd>&nbsp;tab&nbsp;</kbd></td>
+<td valign="top" height="30px">Increase/decrease radius</td>
+<td valign="top" align="center"><kbd>&nbsp;1 (num)&nbsp;</kbd> <kbd>&nbsp;2 (num)&nbsp;</kbd></td>
 </tr>
 </tbody>
 </table>
