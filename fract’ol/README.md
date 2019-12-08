@@ -51,11 +51,16 @@ Control
 </tr>
 <tr>
 <td valign="top" height="30px">Increase/decrease fractol iteration</td>
-<td valign="top" align="center"><kbd>&nbsp;+&nbsp;</kbd> <kbd>&nbsp;-&nbsp;</kbd></td>
+<td valign="top" align="center"><kbd>&nbsp;+ (num)&nbsp;</kbd> <kbd>&nbsp;- (num)&nbsp;</kbd></td>
+</tr>
+<tr>
+<td valign="top" height="30px">Change color scheme</td>
+<td valign="top" align="center"><kbd>&nbsp;+ (num)&nbsp;</kbd> <kbd>&nbsp;- (num)&nbsp;</kbd></td>
 </tr>
 </tbody>
 </table>
 
+Zoom in and out with the mousewheel:)
 
 ## Pictures
 ### Mandelbrot
