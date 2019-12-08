@@ -1,5 +1,5 @@
-![open_cl](image/OpenCL_Log.png)
-![open_sdl](image/SDL_Logo.png)
+<img src="https://github.com/Slava203/school_21/tree/master/RTv1/OpenCL_Log.png" height="80" align="top"/>
+
 RTv1
 =====================
 RTv1 is a simple ray tracing program. The project was developed as a part of 42 school program.
