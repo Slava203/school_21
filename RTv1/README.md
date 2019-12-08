@@ -14,6 +14,7 @@ Clone or download this repository and run `make` in command line while in the ro
 `scne_name` must contain path to a valid scene.If the scene is not valid, RTv1 will write corresponding error on standard output.
 
 ## Scene Syntax
+Scene is a file which describes camera, lights and geometric objects that have to be rendered.
 ```
 scene
 {
@@ -21,4 +22,18 @@ scene
   cam_dir(x_direction y_direction z_direction)
   ambient(level_of_ambient)
 }
+
+{
+  Add object
+}
+```
+### Object Syntax
+
+This project can render such geometric shapes:  
+- Sphere;
+- Infinite Plane;
+- Infinite Cylinder;
+- Infinite Cone. 
+```
+
 ```
