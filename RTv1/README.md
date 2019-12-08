@@ -1,5 +1,5 @@
 
-<img src="https://github.com/VolodymyrKuksa/RTv1/blob/master/images/Unit_logo.png" height="80" align="top"/>
+<img src="https://github.com/Slava203/school_21/tree/master/RTv1/image/OpenCL_Log.png" height="80" align="top"/>
 
 RTv1
 =====================
