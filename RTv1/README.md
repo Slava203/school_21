@@ -1,5 +1,3 @@
-<img src="https://github.com/Slava203/school_21/tree/master/RTv1/OpenCL_Log.png">
-
 RTv1
 =====================
 RTv1 is a simple ray tracing program. The project was developed as a part of 42 school program.
