@@ -2,6 +2,10 @@
 
 ![Screenshots](https://github.com/Slava203/school_21/blob/master/ft_linear_regression/TrainingPlots/Data%20plot.png)
 
+![Screenshots](https://github.com/Slava203/school_21/blob/master/ft_linear_regression/TrainingPlots/Data%20with%20line.png)
+
+![Screenshots](https://github.com/Slava203/school_21/blob/master/ft_linear_regression/TrainingPlots/Training%20Loss.png)
+
 ## Goal of the project
 
 The goal of the project is to train a program to guess the price of a car given its kilometrage. It's a simple linear regression problem.
