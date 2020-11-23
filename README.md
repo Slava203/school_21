@@ -1,6 +1,6 @@
 # ft_linear_regression
 
-![Screenshots](/TrainingPlots/Data plot.png)
+![Screenshots](/TrainingPlots/'Data plot.png')
 
 ## Goal of the project
 
