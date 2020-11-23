@@ -1,5 +1,7 @@
 # ft_linear_regression
 
+![Screenshots](/TrainingPlots/Data plot.png)
+
 ## Goal of the project
 
 The goal of the project is to train a program to guess the price of a car given its kilometrage. It's a simple linear regression problem.
