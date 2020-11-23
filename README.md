@@ -8,10 +8,10 @@ The goal of the project is to train a program to guess the price of a car given 
 
 Be sure to have a Python > 3.5 installed, with numpy, pandas and matplotlib.
 
-To visualize the dataset:
+### If the model has already been trained
 
 ```sh
-# If the model has already been trained and you need to predict all data from file
+# predict all data from file
 python3 predict.py
 ```
 To predict a price:
@@ -20,7 +20,7 @@ To predict a price:
 python3 predict_value.py
 ```
 
-To train the dataset:
+### To train the dataset:
 
 ```sh
 python3 train.py
